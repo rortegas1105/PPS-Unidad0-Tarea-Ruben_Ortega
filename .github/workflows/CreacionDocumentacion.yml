@@ -1,0 +1,27 @@
+name: Generar Documentación MkDocs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Generar y desplegar documentación en GitHub Pages
+        run: |
+          pip install mkdocs-material
+          mkdocs gh-deploy --force
