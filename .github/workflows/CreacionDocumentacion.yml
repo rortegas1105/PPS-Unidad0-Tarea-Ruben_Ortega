@@ -39,7 +39,9 @@ jobs:
       - name: Construir documentación
         run: mkdocs build
 
-      # 6️⃣ Desplegar en GitHub Pages
+      # 6️⃣ Desplegar en GitHub Pages usando token seguro
       - name: Desplegar en GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: mkdocs gh-deploy --force
 
