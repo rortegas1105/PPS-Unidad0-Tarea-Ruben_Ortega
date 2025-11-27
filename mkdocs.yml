@@ -1,0 +1,13 @@
+site_name: PPS Unidad 0 - Ruben Ortega Serradilla
+
+nav:
+  - Inicio: docs/index.md
+  - Git: docs/git.md
+  - GitHub Actions: docs/gitActions.md
+  - GitHub Pages: docs/gitPages.md
+  - Docker: docs/docker.md
+  - Conclusiones: docs/conclusiones.md
+
+theme:
+  name: readthedocs
+
